@@ -77,8 +77,8 @@
                     </div>
                     <div class="d-flex flex-row p-1 ">
                         <v-sheet class="w-full h-full w-max p-2 d-flex flex-row " color="white" elevation="2" height="68.4vh" width="49.5vw">
-                            <div>
-                                <div class="m-2">
+                            <div style="width: 17vw;" >
+                                <div class="m-2" >
 
                                     &ocir; ปริญญาตรี
 
@@ -113,8 +113,8 @@
                                 </div>
 
                             </div>
-                            <div>
-                                <div>
+                            <div style="width: 17vw;" >
+                                <div class="m-2">
                                     &ocir; ปริญญาโท
                                 </div>
                                 <div class="d-flex flex-row ">
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div>
+                                <div class="m-2">
                                     &ocir; ปริญญาเอก
                                 </div>
                                 <div class="d-flex flex-row ">
@@ -194,6 +194,7 @@ export default {
 <style>
 .line {
     border: 2px solid black;
+    
 
 }
 </style>
