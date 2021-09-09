@@ -31,8 +31,8 @@
                 </v-btn>
               </template>
               <v-list>
-                <v-list-item v-for="(information, index) in information" :key="index">
-                  <v-list-item-title>{{ information.title }}</v-list-item-title>
+                <v-list-item v-for="(information, index) in information" :key="index" @click="ContactTabinformation = index" :class="{active: ContactTab === index}">
+                  <v-list-item-title>{{ information }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -46,8 +46,8 @@
                 </v-btn>
               </template>
               <v-list>
-                <v-list-item v-for="(development, index) in development" :key="index">
-                  <v-list-item-title>{{ development.title }}</v-list-item-title>
+                <v-list-item v-for="(development, index) in development" :key="index" @click="ContactTabdevelopment = index" :class="{active: ContactTab === index}">
+                  <v-list-item-title>{{ development }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -61,8 +61,8 @@
                 </v-btn>
               </template>
               <v-list>
-                <v-list-item v-for="(position, index) in position" :key="index">
-                  <v-list-item-title>{{ position.title }}</v-list-item-title>
+                <v-list-item v-for="(position, index) in position" :key="index" @click="ContactTabposition = index" :class="{active: ContactTab === index}">
+                  <v-list-item-title>{{ position }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -100,26 +100,18 @@
 
 <script>
 export default {
-  data: () => ({
-    information: [
-      { title: "ข้อมูลส่วนตัว"},
-      { title: "ข้อมูลบุคลากร" },
-      { title: "ข้อมูลอัตรากำลัง" },
-    ],
-    
-    development: [
-      { title: "ข้อมูลการอบรม/สัมมนา/ดูงาน" },
-      { title: "ข้อมูลการใช้งบประมาณพัฒนาศักยภาพ" },
-      { title: "ข้อมูลการลาศึกษา" },
-      { title: "ข้อมูลบุคลากรดีเด่น" }
-    ],
+  data: () => {
+    return ({
+      ContactTabinformation: 0,
+      information: ['ข้อมูลส่วนตัว','ข้อมูลบุคลากร' ,'ข้อมูลอัตรากำลัง' ],
 
-    position: [
-      { title: "สถานะดำเนินการ" },
-      { title: "เอกสารประกอบการสอน / คำสอน" },
-      { title: "ผู้ดำรงตำแหน่งทางวิชาการ" },
-    ],
-  })
+      ContactTabdevelopment: 0,
+      development: ['ข้อมูลการอบรม/สัมมนา/ดูงาน' ,'ข้อมูลการใช้งบประมาณพัฒนาศักยภาพ' ,'ข้อมูลการลาศึกษา','ข้อมูลบุคลากรดีเด่น'],
+
+      ContactTabposition: 0,
+      position: ['สถานะดำเนินการ','เอกสารประกอบการสอน / คำสอน' ,'ผู้ดำรงตำแหน่งทางวิชาการ' ]
+    })
+  }
 };
 </script>
 
