@@ -92,8 +92,9 @@
 export default {
   data () {
     return {
+      drawer1: {},
       clipped: false,
-      drawer: false,
+      // drawer: false,
       fixed: false,
       items: [
         {
@@ -112,6 +113,19 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js'
     }
+  },
+  computed:{
+      drawer:{
+          get(){
+            this.drawer1 = this.$nuxt.$store.state.drawer;
+            return this.$nuxt.$store.state.drawer;
+          },
+          set(val){
+              console.log(this.$nuxt.$store.state.drawer)
+              this.$store.commit('set_drawer', val)
+              console.log(this.$nuxt.$store.state.drawer)
+          }
+      }
   }
 }
 </script>
