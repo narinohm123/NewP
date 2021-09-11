@@ -98,48 +98,48 @@
 export default {
     data: () => {
         return ({
-            ContactTabinformation: {},
+            // ContactTabinformation: {},
             information: ['ข้อมูลส่วนตัว', 'ข้อมูลบุคลากร', 'ข้อมูลอัตรากำลัง'],
 
-            ContactTabdevelopment: {},
+            // ContactTabdevelopment: {},
             development: ['ข้อมูลการอบรม/สัมมนา/ดูงาน', 'ข้อมูลการใช้งบประมาณพัฒนาศักยภาพ', 'ข้อมูลการลาศึกษา', 'ข้อมูลบุคลากรดีเด่น'],
 
-            ContactTabposition: {},
+            // ContactTabposition: {},
             position: ['สถานะดำเนินการ', 'เอกสารประกอบการสอน / คำสอน', 'ผู้ดำรงตำแหน่งทางวิชาการ']
         })
     },
     computed: {
         informationState: {
             get() {
-                this.ContactTabinformation = this.$nuxt.$store.state.information
+                // this.ContactTabinformation = this.$nuxt.$store.state.information
                 return this.$nuxt.$store.state.information
             },
             set(val) {
-                console.log('information', this.$nuxt.$store.state.information)
+                // console.log('information', this.$nuxt.$store.state.information)
                 this.$store.commit('set_information', val)
-                console.log('information', this.$nuxt.$store.state.information)
+                // console.log('information', this.$nuxt.$store.state.information)
             }
         },
         developmentState: {
             get() {
-                this.ContactTabdevelopment = this.$nuxt.$store.state.development
+                // this.ContactTabdevelopment = this.$nuxt.$store.state.development
                 return this.$nuxt.$store.state.development
             },
             set(val) {
-                console.log('development', this.$nuxt.$store.state.development)
+                // console.log('development', this.$nuxt.$store.state.development)
                 this.$store.commit('set_development', val)
-                console.log('development', this.$nuxt.$store.state.development)
+                // console.log('development', this.$nuxt.$store.state.development)
             }
         },
         positionState: {
             get() {
-                this.ContactTabposition = this.$nuxt.$store.state.position
+                // this.ContactTabposition = this.$nuxt.$store.state.position
                 return this.$nuxt.$store.state.position
             },
             set(val) {
-                console.log('position', this.$nuxt.$store.state.position)
+                // console.log('position', this.$nuxt.$store.state.position)
                 this.$store.commit('set_position', val)
-                console.log('position', this.$nuxt.$store.state.position)
+                // console.log('position', this.$nuxt.$store.state.position)
             }
         }
     }
