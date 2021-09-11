@@ -22,7 +22,7 @@
                             <template v-slot:activator="{ on, attrs }">
                                 <v-btn color="#AE78D6" dark v-bind="attrs" v-on="on" style="width: 165%;">
                                     ข้อมูลบุคลากร
-                                    <pre> {{ContactTabinformation}} </pre>
+                                    <!-- <pre> {{ContactTabinformation}} </pre> -->
                                 </v-btn>
                             </template>
                             <v-list>
@@ -38,7 +38,7 @@
                             <template v-slot:activator="{ on, attrs }">
                                 <v-btn color="#AE78D6" dark v-bind="attrs" v-on="on" style="width: 150%;">
                                     การพัฒนาตนเอง
-                                    <pre> {{ContactTabdevelopment}} </pre>
+                                    <!-- <pre> {{ContactTabdevelopment}} </pre> -->
                                 </v-btn>
                             </template>
                             <v-list>
@@ -54,7 +54,7 @@
                             <template v-slot:activator="{ on, attrs }">
                                 <v-btn color="#AE78D6" dark v-bind="attrs" v-on="on" style="width: 140%;">
                                     ตำแหน่งทางวิชาการ
-                                    <pre> {{ContactTabposition}} </pre>
+                                    <!-- <pre> {{ContactTabposition}} </pre> -->
                                 </v-btn>
                             </template>
                             <v-list>
