@@ -1,8 +1,8 @@
 export const state = () => ({
     drawer: false,
     information: 0,
-    development: 0,
-    position: 0,
+    development: null,
+    position: null,
 })
 
 export const mutations = {

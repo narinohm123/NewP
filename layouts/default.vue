@@ -1,9 +1,9 @@
 <template>
     <v-app>
-      <div class="d-flex flex-column">
-        <div><Core-Nav/></div>
-        <div class="w-screen"><Nuxt/></div>
-        <div class=" "><Core-Footer/></div>
+      <div>
+        <Core-Nav/>
+        <Nuxt/>
+        <Core-Footer/>
       </div>
     </v-app>
 

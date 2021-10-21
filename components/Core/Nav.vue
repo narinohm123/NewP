@@ -147,18 +147,24 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 1880px) {}
 .test {
     border: 1px solid black;
+    
+    
 }
-
 .widtter {
     width: 100%;
+    
 }
 
 .higther {
     height: 100%;
+    
     /* height: auto; */
-}
+}   
+  
+
 
 /* .Hd {
   position: relative;
@@ -175,18 +181,23 @@ export default {
 .Box {
     width: 70%;
     display: flex;
+    
 }
+
 
 .v-toolbar__content,
 .v-toolbar__extension {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    
 
 }
 
 .Homepage {
-    position: relative;
-    left: -1rem;
+   position: relative;
+    left: -1rem
+
 }
+
 </style>
