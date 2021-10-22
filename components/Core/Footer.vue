@@ -15,7 +15,7 @@ export default {
 
 <style>
 .borderbottom{
-      border-top: 2px solid #c4996c; 
+      border-top: 2px solid #FFC000; 
 
       color: #8d38c9; 
       font-size: 20px; 
