@@ -149,7 +149,6 @@ export default {
             axios.post('account/logout/')
             localStorage.removeItem(jwt)
             await this.$router.push('/auth/login')
-
         },
     },
 
