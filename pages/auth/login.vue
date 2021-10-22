@@ -23,16 +23,29 @@
             </div>
             <div class="w-full xl:w-1/2 p-8" style="background: white; display: flex; flex-direction: column; justify-content: center;">
 
-                
+              
                     <h1 class=" text-2xl font-bold" style="display: flex; justify-content: center;">Sign in to your account</h1>
-
-                    <!-- <div class="mb-5 mt-6">
-                        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
-                            <div class="mb-4">
+                        <v-form @click.prevent="fetch()">
+                    <div class="mb-1 mt-1">
+                        <div class="bg-white shadow-md rounded px-10 pt-8 pb-10 mb-6 flex flex-col">
+                                <v-text-field label="email" :rules="rules" hide-details="auto" v-model="form.email"></v-text-field>
+                                    <v-text-field label="password" id="password" type="password"  v-model="form.password"></v-text-field>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center">
+                                                <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 bg-indigo-500 focus:ring-indigo-400 border-gray-300 rounded">
+                                                    <label for="remember_me" class="ml-2 block text-sm text-gray-900">
+                                                    Remember me
+                                                 </label>
+                                            </div>
+                                        </div>
+                                    <div class="flex w-full mt-8">
+                                <v-btn type="submit"  elevation="2" large x-large>Login</v-btn>
+                        </div>
+                            <!-- <div class="mb-4">
                                 <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
                                     Email
                                 </label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker " id="username" type="text" placeholder="Username" v-model="form.email">
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker " id="username" type="text" placeholder="email" v-model="form.email">
                             </div>
                             <div class="mb-6">
                                 <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
@@ -44,31 +57,18 @@
                             
                             <div class="flex w-full mt-8">
                                 <v-btn type="submit" elevation="2" large x-large>Login</v-btn>
-                            </div>
+                            </div> -->
                         </div>
 
-                    </div> -->
-
+                    </div>
+            
                 
-                <v-form @click.prevent="fetch()">
-                    <v-text-field label="email" :rules="rules" hide-details="auto" v-model="form.email"></v-text-field>
-                    <v-text-field label="password" v-model="form.password"></v-text-field>
-                    <div class="flex items-center justify-between">
-
-                                <div class="flex items-center">
-                                    <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 bg-indigo-500 focus:ring-indigo-400 border-gray-300 rounded">
-                                    <label for="remember_me" class="ml-2 block text-sm text-gray-900">
-                                        Remember me
-                                    </label>
-                                </div>
-
-                            </div>
-                    <v-btn type="submit"  elevation="2" large x-large>Login</v-btn>
-                </v-form>
-            </div>
-
-        </v-dialog>
-
+                
+                    
+                </v-form>         
+                </div>
+            </v-dialog>
+       
     </div>
 
 </div>
