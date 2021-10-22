@@ -52,7 +52,7 @@
                             <div class="border-l-2 p-1 ">
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{profile.id_Position}}</p>
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.name_th}}</p> 
-                                <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.name_eng}}</p>
+                                <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.name_en}}</p>
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.personal_type}}</p>
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.line_of_work}}</p>
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.position}}</p>
@@ -186,7 +186,6 @@
             </div>
         </div>
     </div>
-
 </div>
 </template>
 
@@ -195,18 +194,29 @@ import {get , post} from '../../config/service'
 import { end_point , api } from '../../config/config';
 import axios from '@nuxtjs/axios'
 const url  = end_point + api
+
 export default {
    data() {
       return {
-        profile: []
+        profile: {}
         
       }
     },
-    async fetch() {
-      this.profile = await fetch(
-        url
-      ).then(res => res.json())
+    async fetch(){
+        this.form = await fetch(
+            url,
+            console.log(fetch)
+        ).then(res => res.json())
     },
+    mounted(){
+        this.dataProfile()
+    },
+    methods:{
+        async dataProfile(){
+            let rs = await this.$axios.get('account/user-profile/')
+            console.log(rs)
+        }
+    }
     
 }
 
