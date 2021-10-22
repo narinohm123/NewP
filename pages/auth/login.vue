@@ -25,10 +25,10 @@
 
               
                     <h1 class=" text-2xl font-bold" style="display: flex; justify-content: center;">Sign in to your account</h1>
-                        <v-form @click.prevent="fetch()">
+                        <v-form >
                     <div class="mb-1 mt-1">
                         <div class="bg-white shadow-md rounded px-10 pt-8 pb-10 mb-6 flex flex-col">
-                                <v-text-field label="email" :rules="rules" hide-details="auto" v-model="form.email"></v-text-field>
+                                <v-text-field label="email" :rules="rules" hide-details="auto" v-model="form.username"></v-text-field>
                                     <v-text-field label="password" id="password" type="password"  v-model="form.password"></v-text-field>
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-center">
@@ -39,7 +39,7 @@
                                             </div>
                                         </div>
                                     <div class="flex w-full mt-8">
-                                <v-btn type="submit"  elevation="2" large x-large>Login</v-btn>
+                                <v-btn @click.prevent="login()" type="submit"  elevation="2" large x-large>Login</v-btn>
                         </div>
                             <!-- <div class="mb-4">
                                 <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
@@ -75,8 +75,9 @@
 </template>
 
 <script>
-import { end_point , login } from '../../config/config';
-const url  = end_point + login
+import { end_point , api } from '../../config/config';
+const url  = end_point + api
+import Swal from 'sweetalert2'
 export default {
     data() {
         return {
@@ -84,11 +85,47 @@ export default {
             form:{}
         }
     },
-    async fetch(){
-        this.form = await fetch(
-            url
-        ).then(res => res.json())
+    // async fetch(){
+    //     this.form = await fetch(
+    //         url,
+    //         console.log(fetch)
+    //     ).then(res => res.json())
+    // },
+    methods: {
+        async login(){
+            try {
+                let rs = await this.$axios.post('account/login/', this.form)
+                let { data }= rs
+                localStorage.setItem('account/login/',data.jwt)
+                // console.log(rs)               
+                await this.$router.push('/Pageone/profile')
+                await Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'ยินดีค้อนรับ',
+                    showConfirmButton: false,
+                    timer: 1000
+                    })
+                
+            } catch (error) {
+                await Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'ไม่สามารถเข้าสู่ระบบได้',
+                    showConfirmButton: false,
+                    timer: 1000
+                    })
+                await this.$router.push('/auth/login')
+            }
+        },
+        // async getUser(){
+        //     await this.login()
+        //     let user = await $axios.get('account/user-profile/')
+        //     localStorage.setItem(user)
+        //     console.log(user)
+        // }
     },
+
         
     }
     

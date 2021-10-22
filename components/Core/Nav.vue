@@ -10,7 +10,7 @@
                 <p style="margin-right: 17rem; margin-top: 1.50rem;">ผู้ใช้งาน : </p>
             </div>
             <div>
-                <v-btn large x-large x-small style="margin-top: 0.50rem;">ออกจากระบบ</v-btn>
+                <v-btn  @click.prevent="logout()" large x-large x-small style="margin-top: 0.50rem;">ออกจากระบบ</v-btn>
             </div>
         </div>
 
@@ -95,6 +95,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     data: () => {
         return ({
@@ -142,7 +143,16 @@ export default {
                 // console.log('position', this.$nuxt.$store.state.position)
             }
         }
-    }
+    },
+    methods: {
+        async logout(){
+            axios.post('account/logout/')
+            localStorage.removeItem(jwt)
+            await this.$router.push('/auth/login')
+
+        },
+    },
+
 };
 </script>
 

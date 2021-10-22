@@ -33,6 +33,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -50,6 +51,10 @@ export default {
     '@nuxtjs/axios',
   ],
   
+  axios:{
+    baseUrl : "http://127.0.0.1:8000/api/"
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
