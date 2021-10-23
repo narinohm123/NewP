@@ -50,7 +50,7 @@
                                 <p class="m-0 mb-0 p-1 ">ที่อยู่ปัจจุบัน</p>
                             </div>
                             <div class="border-l-2 p-1 ">
-                                <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{profile.id_Position}}</p>
+                                <!-- <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{profile.id_Position}}</p>
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.name_th}}</p> 
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.name_en}}</p>
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.personal_type}}</p>
@@ -67,7 +67,7 @@
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.phone}}</p>
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.email_UP}}</p>
                                 <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.email_private}}</p>
-                                <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.address}}</p>
+                                <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1 ">{{ profile.address}}</p> -->
                             </div>
                         </v-sheet>
                     </div>
@@ -103,7 +103,7 @@
                                         <p class="m-0 mb-0 p-1">วุฒิที่ใช้บรรจุ</p>
                                     </div>
                                     <div class="border-l-2 p-1 ">
-                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.degree}}</p>
+                                        <!-- <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.degree}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.faculty}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.university}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.province}}</p>
@@ -112,7 +112,7 @@
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.graduate}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.gpa}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.honors}}</p>
-                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.use_choice_con}}</p>
+                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.use_choice_con}}</p> -->
                                     </div>
 
                                 </div>
@@ -136,7 +136,7 @@
                                         <p class="m-0 mb-0 p-1">วุฒิที่ใช้บรรจุ</p>
                                     </div>
                                     <div class="border-l-2 p-1 ">
-                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.degree_Master}}</p>
+                                        <!-- <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.degree_Master}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.faculty_Master}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.university_Master}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.province_Master}}</p>
@@ -145,7 +145,7 @@
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.graduate_Master}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.gpa_Master}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.honors_Master}}</p>
-                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.use_choice_con_Master}}</p>
+                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.use_choice_con_Master}}</p> -->
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +167,7 @@
                                         <p class="m-0 mb-0 p-1">วุฒิที่ใช้บรรจุ</p>
                                     </div>
                                     <div class="border-l-2 p-1 ">
-                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.degree_doctorate}}</p>
+                                        <!-- <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.degree_doctorate}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.faculty_doctorate}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.university_doctorate}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.province_doctorate}}</p>
@@ -176,7 +176,7 @@
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.graduate_doctorate}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.gpa_doctorate}}</p>
                                         <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.honors_doctorate}}</p>
-                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.use_choice_con_doctorate}}</p>
+                                        <p v-for="(profile, index) in profile" :key="index" class="m-0 mb-0 p-1">{{ profile.use_choice_con_doctorate}}</p> -->
                                     </div>
                                 </div>
                             </div>
@@ -196,27 +196,27 @@ import axios from '@nuxtjs/axios'
 const url  = end_point + api
 
 export default {
-   data() {
-      return {
-        profile: {}
+//    data() {
+//       return {
+//         profile: {}
         
-      }
-    },
-    async fetch(){
-        this.form = await fetch(
-            url,
-            console.log(fetch)
-        ).then(res => res.json())
-    },
-    mounted(){
-        this.dataProfile()
-    },
-    methods:{
-        async dataProfile(){
-            let rs = await this.$axios.get('account/user-profile/')
-            console.log(rs)
-        }
-    }
+//       }
+//     },
+//     async fetch(){
+//         this.form = await fetch(
+//             url,
+//             console.log(fetch)
+//         ).then(res => res.json())
+//     },
+//     mounted(){
+//         this.dataProfile()
+//     },
+//     methods:{
+//         async dataProfile(){
+//             let rs = await this.$axios.get('account/user-profile/')
+//             console.log(rs)
+//         }
+//     }
     
 }
 

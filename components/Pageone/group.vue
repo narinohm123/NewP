@@ -21,23 +21,7 @@
 </template>
 
 <script>
-import Outstanding from '../../components/Pages/Outstanding.vue'
-import Developmentbudget from '../Subpage/developmentbudget.vue'
-import field from '../Subpage/field.vue'
-import Fieldstudy from '../Subpage/field.vue'
-import Lastudy from '../Subpage/lastudy.vue'
-import Powerrating from '../Subpage/powerrating.vue'
-import seework from '../Subpage/seework.vue'
-import outstandingpersonel from '../Subpage/outstandingpersonel.vue'
-import Actionstatus from '../Subpage/actionstatus.vue'
-import Documentation from '../Subpage/documentation.vue'
-import Incumbent from '../Subpage/incumbent.vue'
-import Developmentplan from '../Subpage/developmentplan.vue'
-import Performancereport from '../Subpage/performancereport.vue'
-export default {
-  components: { field, Powerrating, seework, Developmentbudget, Lastudy ,outstandingpersonel, Actionstatus, Documentation, Incumbent, Developmentplan, Performancereport},
 
-}
 </script>
 
 <style>
