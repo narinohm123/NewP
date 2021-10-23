@@ -102,7 +102,7 @@ export default {
                 await Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    title: 'ยินดีค้อนรับ',
+                    title: 'ยินดีต้อนรับ',
                     showConfirmButton: false,
                     timer: 1000
                     })

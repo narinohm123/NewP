@@ -96,6 +96,7 @@
 
 <script>
 import axios from 'axios';
+import Swal from 'sweetalert2'
 export default {
     data: () => {
         return ({
@@ -147,7 +148,13 @@ export default {
     methods: {
         async logout(){
             axios.post('account/logout/')
-            localStorage.removeItem(jwt)
+                await Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'ออกจากระบบ',
+                    showConfirmButton: false,
+                    timer: 1200
+})
             await this.$router.push('/auth/login')
         },
     },
