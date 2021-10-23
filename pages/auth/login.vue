@@ -104,7 +104,7 @@ export default {
                     icon: 'success',
                     title: 'ยินดีต้อนรับ',
                     showConfirmButton: false,
-                    timer: 1000
+                    timer: 1100
                     })
                 
             } catch (error) {
@@ -113,7 +113,7 @@ export default {
                     icon: 'error',
                     title: 'ไม่สามารถเข้าสู่ระบบได้',
                     showConfirmButton: false,
-                    timer: 1000
+                    timer: 1100
                     })
                 await this.$router.push('/auth/login')
             }

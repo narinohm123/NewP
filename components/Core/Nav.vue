@@ -149,14 +149,17 @@ export default {
         async logout(){
             axios.post('account/logout/')
                 await Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
                     title: 'ออกจากระบบ',
                     showConfirmButton: false,
-                    timer: 1200
+                    timer: 1100
 })
             await this.$router.push('/auth/login')
         },
+        async test(x){
+            console.log(X)
+        }
     },
 
 };
