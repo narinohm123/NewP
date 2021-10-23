@@ -18,17 +18,23 @@
             <div class="Box" style="display: flex; width: 95%;">
                 <v-app-bar class="display: flex; justify-content: space-between" color="#AE78D6" dense dark>
                     <div class="text-center ">
+                        <!-- <pre>
+                            {{stateinfimationtab}}
+                        </pre> -->
                         <v-menu offset-y>
                             <template v-slot:activator="{ on, attrs }">
                                 <v-btn color="#AE78D6" dark v-bind="attrs" v-on="on" style="width: 165%;">
                                     ข้อมูลบุคลากร
                                     <!-- <pre> {{ContactTabinformation}} </pre> -->
+                                    <pre> {{informationState}} </pre>
                                 </v-btn>
                             </template>
                             <v-list>
-                                <v-list-item v-for="(infimationtab, index) in information" :key="infimationtab.id" @click="informationState = index" :class="{active: informationState === index}">
-                                    <v-list-item-title>{{ infimationtab }}</v-list-item-title>
-                                </v-list-item>
+                                <v-list-item-group v-model="stateinfimationtab">
+                                    <v-list-item v-for="(infimationtab, index) in information" :key="infimationtab.id" @click="informationState = index" :class="{active: informationState === index}">
+                                        <v-list-item-title>{{ infimationtab }}</v-list-item-title>
+                                    </v-list-item>
+                                </v-list-item-group>
                             </v-list>
                         </v-menu>
                     </div>
@@ -100,6 +106,8 @@ import Swal from 'sweetalert2'
 export default {
     data: () => {
         return ({
+
+            stateinfimationtab: 0,
             // ContactTabinformation: {},
             information: ['ข้อมูลส่วนตัว', 'ข้อมูลบุคลากร', 'ข้อมูลอัตรากำลัง'],
 
@@ -117,9 +125,9 @@ export default {
                 return this.$nuxt.$store.state.information
             },
             set(val) {
-                // console.log('information', this.$nuxt.$store.state.information)
+                console.log('information', this.$nuxt.$store.state.information)
                 this.$store.commit('set_information', val)
-                // console.log('information', this.$nuxt.$store.state.information)
+                console.log('information', this.$nuxt.$store.state.information)
             }
         },
         developmentState: {
